@@ -1,0 +1,20 @@
+/models/
+/runs/
+/tensorboard/
+/tmp/
+/wandb/
+/eval/
+/evals/
+/eval_model/
+/dashboard_source/
+/results_glosa/
+/results_glosa_paper/
+/tl_plots/
+/yaml_sweeps/
+plot.html
+plot.png
+
+
+# Python
+*.pyc
+__pycache__/
