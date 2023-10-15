@@ -9,7 +9,7 @@ Our research addresses Green Light Optimized Speed Advisory (GLOSA), an applicat
  
 ## Usage:
 
-The code is executable for different Sumo versions, but the results slightly differ depending on the version. We recommend using Python 3.10.
+The code is executable for different SUMO versions, but the results slightly differ depending on the version. In our study, we used SUMO 1.11.0. Also, we recommend using Python 3.10.
 
 The main component for executing the code is the `run.py` file. The desired approach, rule-based classic or RL-based GLOSA, as well as other relevant parameters such as step size can be defined within the `config.ini` file.
 
