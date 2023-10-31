@@ -22,9 +22,22 @@ The core component is the `GLOSA_agent` class within `glosa.py`. Here, the optim
 
 ### RL-based GLOSA:
 
+## Prerequisites:
+
+This repository requires that you already have installed the SUMO traffic simulator. For more information on how to install SUMO, please refer to https://sumo.dlr.de/docs/Installing.html.
+
 ## Installation:
 ```bash
 git clone https://github.com/urbanAIthi/GLOSA_RL.git
+
+cd GLOSA_RL
+
+conda env create -f environment.yml
+
+conda activate glosa_rl env
+
+# get the stable baselines3 library
+git clone https://github.com/DLR-RM/stable-baselines3.git
 
 ```
 
@@ -43,9 +56,10 @@ If you use this code in your research, please cite our paper:
 ```
 
 This work uses a cutout of the SUMO simulation network provided in: https://github.com/TUM-VT/sumo_ingolstadt.git <br>
-The RL-based GLOSA approach incorporates RL-algorithms from Stable Baselines.
+The RL-based GLOSA approach incorporates RL-algorithms from Stable Baselines3: https://github.com/DLR-RM/stable-baselines3 <br>
 
 ## License
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
 
 
 
