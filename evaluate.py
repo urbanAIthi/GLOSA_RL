@@ -238,8 +238,6 @@ def evaluate(config: configparser.ConfigParser, path: str, sumo_path: str, load:
                     f'file trained_agent exists: {os.path.exists(os.path.join(os.path.abspath(os.path.join(org_path, os.pardir)), "best_model.zip"))}')
                 agent = algorithm_classes[config.get('RL-Training', 'rl_agent')].load(
                     os.path.join(os.path.abspath(os.path.join(org_path, os.pardir)), 'best_model'), env=env)
-            else:
-                raise ValueError('Train agent before testing')
 
         # Run the evaluation
         obs = env.reset()
