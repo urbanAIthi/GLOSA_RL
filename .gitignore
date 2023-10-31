@@ -20,4 +20,4 @@ plot.png
 __pycache__/
 
 # Stale baselines
-/stale_baselines3
+stable_baselines3/

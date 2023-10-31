@@ -21,6 +21,7 @@ The core component is the `GLOSA_agent` class within `glosa.py`. Here, the optim
 
 
 ### RL-based GLOSA:
+The RL-based glosa requires a training of the agent to learn a good glosa policy given the current state. To do so, the variable `glosa_agent` within the `config.ini` must be set to `rl` and set the RL-Training, RL-State and RL-Reward parameters within the `config.ini` file. Once those parameters are set, the training can be started by executing the `run.py` file which then uses our common GLOSA environment and the stable baselines3 library to train the agent. All results of the training and the evaluation are stored in the `results` folder.
 
 ## Prerequisites:
 
