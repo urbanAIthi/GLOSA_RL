@@ -1,4 +1,3 @@
-
 try:
     from GLOSA_gym.settings import configure_sumo
     from GLOSA_gym.glosa import get_tl_info, get_preceding_vehciles
@@ -193,7 +192,7 @@ class VehicleObserver:
         tl_distance = self.tl_distance
         current_state = traci.vehicle.getNextTLS('ego')[depth][3].lower()
         # Identifying arrival time of the ego vehicle based on its current speed
-        current_speed = 13.89#round(traci.vehicle.getSpeed('ego'), 2)
+        current_speed = round(traci.vehicle.getSpeed('ego'), 2)
         time_to_tl = int(tl_distance/current_speed)
         phase_on_arrival = up_phases_index[time_to_tl]
         self.phase_on_arrival = phase_on_arrival
