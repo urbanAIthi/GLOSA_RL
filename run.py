@@ -28,6 +28,8 @@ if __name__ == '__main__':
                       f"_step{config.get('GLOSA_general', 'steps') if config.get('GLOSA_general', 'glosa_agent') == 'classic' else ''}" \
                       f"_del{config.get('Classic-Configs', 'delay') if config.get('GLOSA_general', 'glosa_agent') == 'classic' else ''}" \
                       f"_{datetime.datetime.fromtimestamp(int(time.time())).strftime('%m-%d-%H-%M')}"
+    
+    assert config.get('GLOSA_general', 'glosa_agent') in ['classic', 'rl'], "Unknown GLOSA agent"
 
     # store the config values for wandb
     wandb_config = {k: v for section in config._sections.values() if isinstance(section, dict) for k, v in section.items()}
@@ -35,12 +37,12 @@ if __name__ == '__main__':
     # initialize wandb for experiment tracking
     wandb.init(
         name=experiment_name,
-        project="glosa_anna",
+        project=config.get('wandb', 'project'),
         config=wandb_config,
         sync_tensorboard=True,
         monitor_gym=False,
         save_code=True,
-        mode = 'offline'
+        mode = config.get('wandb', 'mode')
     )
 
     # create the folder structure for the experiment
